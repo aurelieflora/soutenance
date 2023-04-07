@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paiement - Mon application</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mon application</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('accueil') }}">Accueil</a></li>
+                <!-- <li><a href="{{ url_for('professionnels') }}">Professionnels</a></li> -->
+                <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('a_propos_de_nous') }}">A propos</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Paiement</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="nom">Nom sur la carte</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="numero">Numéro de carte</label>
+                <input type="text" id="numero" name="numero" required>
+            </div>
+            <div class="form-group">
+                <label for="expiration">Date d'expiration (MM/AA)</label>
+                <input type="text" id="expiration" name="expiration" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">Code de sécurité (CVV)</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div class="form-group">
+                <label for="montant">Montant à payer</label>
+                <input type="text" id="montant" name="montant" required>
+            </div>
+            <div class="form-group">
+                <label for="moyen-paiement">Moyen de paiement</label>
+                <select id="moyen-paiement" name="moyen-paiement" required>
+                    <option value="">Choisir un moyen de paiement</option>
+                    <option value="MTN Mobile Money">MTN Mobile Money</option>
+                    <option value="Orange Money">Orange Money</option>
+                    <option value="Moov">Moov</option>
+                    <option value="Wave">Wave</option>
+                    <option value="Djamo">Djamo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit">Payer</button>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2023 Mon application - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

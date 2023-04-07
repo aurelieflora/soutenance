@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Accueil - Reference</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Reference</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('accueil') }}">Accueil</a></li>
+                <!-- <li><a href="{{ url_for('professionnels') }}">Professionnels</a></li> -->
+                <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('a_propos_de_nous') }}">A propos</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Bienvenue sur Reference</h2>
+        <p>les professionels sont plus prohe de vous!</p>
+        <a href="{{ url_for('inscription_utilisateur') }}" class="cta">Trouvez un professionnel maintenant</a>
+
+    </section>
+    <footer>
+        <p>&copy; 2023 Reference - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

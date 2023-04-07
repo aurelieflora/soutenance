@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A propos de nous</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1>À propos de Reference</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('accueil') }}">Accueil</a></li>
+                <!-- <li><a href="{{ url_for('professionnels') }}">Professionnels</a></li> -->
+                <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('a_propos_de_nous') }}">A propos</a></li>
+
+            </ul>
+            </nav>
+        </header>
+        <section>
+            <h2>Notre objectif</h2>
+            <p>Nom de l'application a pour objectif de mettre en relation les utilisateurs avec des professionnels compétents dans leur domaine.</p>
+            <h2>Nos fonctionnalités principales</h2>
+            <ul>
+                <li>Recherche de professionnels par domaine et par localisation</li>
+                <li>Comparaison des devis et des prix proposés</li>
+                <li>Prise de rendez-vous en ligne</li>
+            </ul>
+            <h2>Notre équipe</h2>
+            <p>Nous sommes une équipe de développeurs passionnés qui croient en la mission de Reference. Nous travaillons dur pour rendre notre plateforme accessible et facile à utiliser pour tous les utilisateurs.</p>
+            <p>Notre mission est de fournir une expérience utilisateur de qualité tout en aidant les professionnels à se connecter avec des clients qui ont besoin de leurs services.</p>
+        </section>
+        <footer>
+            <p>&copy; 2023 Nom de l'application - Tous droits réservés</p>
+        </footer>
+    </body>
+    </html>
+    

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Mon application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mon application</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('accueil') }}">Accueil</a></li>
+                <!-- <li><a href="{{ url_for('professionnels') }}">Professionnels</a></li> -->
+                <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('a_propos_de_nous') }}">A propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section>
+        <h2 class="text-align: center;">Connectez-vous à votre compte</h2>
+        <form action="{{ url_for('connexion_utilisateur') }}" method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mot_de_passe">Mot de passe</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Se connecter</button>
+                <a href="{{ url_for('inscription_utilisateur') }}">Pas encore de compte?</a>
+            
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes" style="color:red;">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            </div>
+        </form>
+    </section>
+    <footer>
+    <p>&copy; 2023 Mon application - Tous droits réservés</p>
+    </footer>
+</body>
+</html>

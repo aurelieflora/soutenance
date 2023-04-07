@@ -1,0 +1,298 @@
+/* Couleurs */
+:root {
+    --primary-color: #FF8C00;
+    --secondary-color: #1E90FF;
+    --text-color: #333;
+}
+
+/* Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF;
+    color: var(--text-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+nav a:hover {
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+nav a:active {
+    text-shadow: 0 0 10px var(--secondary-color);
+}
+
+section {
+    padding: 50px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: green;
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    text-align: center;
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;     /* hauteur de 50 pixels */
+}
+
+
+/* .footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+} */
+
+/* POUR LES PROFESSIONNELS */
+/* section.afficher {
+    padding: 50px;
+} */
+
+.professionnels-liste {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.professionnel {
+    flex-basis: calc(50% - 10px);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 10px;
+}
+.professionnel-info{
+    max-width:  200%;
+    /* margin: 10px; */
+
+}
+.professionnel img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.professionnel h3 {
+    margin-bottom: 5px;
+}
+
+.professionnel p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.professionnels-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.professionnels-groupe {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.professionnel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+}
+/* FORMULAIRE DE LA PAGE CONTACT */
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff;
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0062cc;
+}
+
+/* LA PAGE DE RESERVATION */
+
+
+
+    
+    /* Style de la section */
+    section {
+    margin: 50px auto;
+    max-width: 600px;
+    }
+    
+    section h2 {
+    margin-bottom: 20px;
+    }
+    
+    form {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .form-group {
+    margin-bottom: 20px;
+    }
+    
+    label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    }
+    
+    select, input[type="date"], input[type="time"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    }
+    
+    button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+    background-color: #555;
+    }
+    
+/* PAGE DE PAIEMENT */
+
+
+
+section {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+
+/* PAGE D'AJOUT SERVICE */
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+
+}
+
+/* ajouter service */
+
+.form-group input,
+.form-group select {
+width: 100%;
+margin-bottom: 10px;
+/* box-sizing: border-box; */
+}

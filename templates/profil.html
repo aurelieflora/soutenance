@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionnels - Reference</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Reference</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('accueil') }}">Accueil</a></li>
+                <!-- <li><a href="{{ url_for('professionnels') }}">Professionnels</a></li> -->
+                <li><a href="{{ url_for('contacts') }}">Contact</a></li>
+                <li><a href="{{ url_for('ajouter_services') }}">Ajouter mes services</a></li>
+                <li><a href="{{ url_for('a_propos_de_nous') }}">A propos</a></li>
+                <form action="{{ url_for('deconnexion') }}" method="get">
+                    <button type="submit">Déconnexion</button>
+                </form>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Profil professionnel</h2>
+        <div>
+            <p>Nom: {{ professionnel[1] }}</p>
+            <p>Prénom: {{ professionnel[2] }}</p>
+            <p>Email: {{ professionnel[3] }}</p>
+            <p>Téléphone: {{ professionnel[4] }}</p>
+            <p>Ville: {{ professionnel[5] }}</p>
+            <p>Service: {{ professionnel[6] }}</p>
+            <img src="{{ url_for('static', filename='upload/' + professionnel[7]) }}"
+                alt="{{ professionnel[1] }} {{ professionnel[2] }}" style="width:auto;">
+            <p>Mot de passe: {{ mot_de_passe }}</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Reference - Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>
